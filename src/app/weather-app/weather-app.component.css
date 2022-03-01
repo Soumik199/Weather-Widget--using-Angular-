@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box{
+    padding-top:20px;
+    width: 30%;
+    height: 60vh;
+    background-color: #92979e5b;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.box::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+    }
+
+i {
+        font-size: 50px;
+        margin-right: 10px;
+ }
+ 
+ .location{
+     margin-top:1.5rem;
+     text-align:center;
+     font-weight: 700;
+     font-size: 25px;
+     color:rgb(2, 2, 3);
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+    }
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+    color:rgba(54, 9, 255, 0.829);
+}
+@keyframes rotates {
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+
+ .temp{
+     display:flex;
+     justify-content: center;
+     justify-content: space-around;
+     margin-top:1.5rem;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ .if{
+     display: flex;
+     justify-content: center;
+     justify-content: space-around;
+     align-items: center;
+     margin-top:1.5rem;
+     padding-right: 25px;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .if2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:1.5rem;
+    padding-right: 9px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .fa-thermometer-full{
+    color: rgb(255, 17, 0);
+}
+.fa-thermometer-empty{
+  color:green;
+}
+.fa-tint{
+    color:rgba(12, 8, 248, 0.87);
+}
+.fa-renren{
+    color:rgb(131, 87, 6)
+}
+.fa-map-signs{
+   color:rgb(21, 34, 9)
+}
+.fa-ravelry{
+   color:rgb(6, 47, 75);
+}
+.weathericon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    height: 20%;
+}
+.fa-sun-o{
+    font-size: 6rem;
+    animation: fas-anime 2s linear alternate;
+    color: rgb(252, 4, 4);
+}
+@keyframes fas-anime {
+    
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}

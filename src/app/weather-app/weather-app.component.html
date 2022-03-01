@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather_App_component </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <div class="weathericon"></div>
+        <h2 class="location"><i class="fa fa-street-view" aria-hidden="true"></i>{{weatherInf.name}},<span>{{weatherInf.sys.country}}</span></h2>
+        <div class="info">
+            <div class="temp">
+            <h4 class="hightemp"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{{weatherInf.main.temp_max}}&deg;C</h4>
+            <h4 class="hightemp"><i class="fa fa-thermometer-empty" aria-hidden="true"></i>{{weatherInf.main.temp_min}}&deg;C</h4>
+            </div>
+            <div class="if">
+                  <h4 class="pressure"><i class="fa fa-renren" aria-hidden="true"></i>{{weatherInf.main.pressure}} Pa</h4>
+                 <h4><i class="fa fa-tint" aria-hidden="true"></i>{{weatherInf.main.humidity}} g.kg-1</h4>
+             </div>
+             <div class="if2">
+                 <h4><i class="fa fa-map-signs" aria-hidden="true"></i>{{weatherInf.wind.speed}} km/h</h4>
+                 <h4><i class="fa fa-ravelry" aria-hidden="true"></i>{{weatherInf.wind.deg}} Degree</h4>
+              </div>
+        </div>
+        <p>Today is {{today | date}}</p>
+        <span id ="temp">{{weatherInf.weather[0].main}}</span>
+    </div>
+ </div>
+</body>
+</html>
+<script>
+   let weathericon= document.getElementsByClassName('weathericon');
+        let temp = document.getElementsByClassName('temp');
+        if(temp = "sunny"){
+            weathericon.innerHtml =`<i class="fa fa-sun-o" aria-hidden="true">`
+        }
+        else if(temp = "Hazy"){
+            weathericon.innerHtml =`<i class="fa fa-sun-o" aria-hidden="true">`
+        }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<p>{{weatherInf.main.temp}}</p>
+<p>{{weatherInf.coord.lon}}</p>
+<p>{{weatherInf.coord.lat}}</p>
+<p>{{weatherInf.weather.main}}</p>
+<p>{{weatherInf.weather.description}}</p>
+<p>{{weatherInf.main.feels_like}}</p>
+<p>{{weatherInf.main.temp_min}}</p>
+<p>{{weatherInf.main.temp_min}}</p>
+<p>{{weatherInf.main.temp_max}}</p>
+<p>{{weatherInf.main.humidity}}</p>
+<p>{{weatherInf.main.pressure}}</p>
+<p>{{weatherInf.sys.country}}</p>
+<p>{{weatherInf.sys.sunrise}}</p>
+<p>{{weatherInf.sys.sunset}}</p>
+<p>{{weatherInf.name}}</p>--->
