@@ -11,39 +11,42 @@
 <body>
     <div class="container">
     <div class="box">
-        <div class="weathericon"></div>
-        <h2 class="location"><i class="fa fa-street-view" aria-hidden="true"></i>{{weatherInf.name}},<span>{{weatherInf.sys.country}}</span></h2>
+        <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; letter-spacing: 1px;">Weather App</h2>
+        <div class="weathericon">
+            <div *ngIf="weatherInf.isDay" class="weatherWidgetRow">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+            </div>   
+            <div *ngIf="!weatherInf.isDay" class="weatherWidgetRow">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </div>   
+            <div class="weatherWidgetRow cloudDiv">
+                <i class="fa fa-cloud" aria-hidden="true"></i>
+            </div>
+        </div>
+        <h2 class="location"><i class="fa fa-street-view" aria-hidden="true"></i>  {{weatherInf.name}} , <span>{{weatherInf.sys.country}}</span></h2>
         <div class="info">
             <div class="temp">
-            <h4 class="hightemp"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{{weatherInf.main.temp_max}}&deg;C</h4>
-            <h4 class="hightemp"><i class="fa fa-thermometer-empty" aria-hidden="true"></i>{{weatherInf.main.temp_min}}&deg;C</h4>
+            <h4 class="hightemp"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{{weatherInf.temp_celcius}}&deg;C</h4>
+            <h4 class="hightemp"><i class="fa fa-thermometer-empty" aria-hidden="true"></i>{{weatherInf.temp_min}}&deg;C</h4>
             </div>
             <div class="if">
                   <h4 class="pressure"><i class="fa fa-renren" aria-hidden="true"></i>{{weatherInf.main.pressure}} Pa</h4>
-                 <h4><i class="fa fa-tint" aria-hidden="true"></i>{{weatherInf.main.humidity}} g.kg-1</h4>
+                 <h4><i class="fa fa-tint" aria-hidden="true"></i>{{weatherInf.main.humidity}}%</h4>
              </div>
              <div class="if2">
-                 <h4><i class="fa fa-map-signs" aria-hidden="true"></i>{{weatherInf.wind.speed}} km/h</h4>
-                 <h4><i class="fa fa-ravelry" aria-hidden="true"></i>{{weatherInf.wind.deg}} Degree</h4>
+                 <h4><i class="fa fa-map-signs" aria-hidden="true"></i>{{weatherInf.wind.speed}}Km/hr</h4>
+                 <h4><i class="fa fa-ravelry" aria-hidden="true"></i>{{weatherInf.wind.deg}} Ra</h4>
               </div>
         </div>
-        <p>Today is {{today | date}}</p>
-        <span id ="temp">{{weatherInf.weather[0].main}}</span>
+        <br>
+        <h4 class="time">Today is {{today | date:'fullTime'}}</h4>
+        
     </div>
  </div>
 </body>
 </html>
-<script>
-   let weathericon= document.getElementsByClassName('weathericon');
-        let temp = document.getElementsByClassName('temp');
-        if(temp = "sunny"){
-            weathericon.innerHtml =`<i class="fa fa-sun-o" aria-hidden="true">`
-        }
-        else if(temp = "Hazy"){
-            weathericon.innerHtml =`<i class="fa fa-sun-o" aria-hidden="true">`
-        }
 
-</script>
+
 
 
 
