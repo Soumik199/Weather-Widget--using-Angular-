@@ -9,10 +9,10 @@
     
 </head>
 <body>
-    <div class="container">
-    <div class="box">
+    <div [ngClass]="'container'">
+    <div [ngClass]="'box'">
         <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; letter-spacing: 1px;">Weather App</h2>
-        <div class="weathericon">
+        <div [ngClass]="'weathericon'">
             <div *ngIf="weatherInf.isDay" class="weatherWidgetRow">
                 <i class="fa fa-sun-o" aria-hidden="true"></i>
             </div>   
@@ -23,23 +23,23 @@
                 <i class="fa fa-cloud" aria-hidden="true"></i>
             </div>
         </div>
-        <h2 class="location"><i class="fa fa-street-view" aria-hidden="true"></i>  {{weatherInf.name}} , <span>{{weatherInf.sys.country}}</span></h2>
-        <div class="info">
-            <div class="temp">
-            <h4 class="hightemp"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{{weatherInf.temp_celcius}}&deg;C</h4>
-            <h4 class="hightemp"><i class="fa fa-thermometer-empty" aria-hidden="true"></i>{{weatherInf.temp_min}}&deg;C</h4>
+        <h2 [ngClass]="'location'"><i class="fa fa-street-view" aria-hidden="true"></i>  {{weatherInf.name}} , <span>{{weatherInf.sys.country}}</span></h2>
+        <div [ngClass]="'info'">
+            <div [ngClass]="'temp'">
+            <h4 [ngClass]="'hightemp'"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{{weatherInf.temp_celcius}}&deg;C</h4>
+            <h4 [ngClass]="'hightemp'"><i class="fa fa-thermometer-empty" aria-hidden="true"></i>{{weatherInf.temp_min}}&deg;C</h4>
             </div>
-            <div class="if">
-                  <h4 class="pressure"><i class="fa fa-renren" aria-hidden="true"></i>{{weatherInf.main.pressure}} Pa</h4>
+            <div [ngClass]="'if'">
+                  <h4 [ngClass]="'pressure'"><i class="fa fa-renren" aria-hidden="true"></i>{{weatherInf.main.pressure}} Pa</h4>
                  <h4><i class="fa fa-tint" aria-hidden="true"></i>{{weatherInf.main.humidity}}%</h4>
              </div>
-             <div class="if2">
+             <div [ngClass]="'if2'">
                  <h4><i class="fa fa-map-signs" aria-hidden="true"></i>{{weatherInf.wind.speed}}Km/hr</h4>
                  <h4><i class="fa fa-ravelry" aria-hidden="true"></i>{{weatherInf.wind.deg}} Ra</h4>
               </div>
         </div>
         <br>
-        <h4 class="time">Today is {{today | date:'fullTime'}}</h4>
+        <h4 [ngClass]="'time'">Today is {{today | date:'fullTime'}}</h4>
         
     </div>
  </div>
