@@ -136,7 +136,7 @@ i {
 
 .fa-moon-o{
     margin-top: 10px;
-    color: white;
+    color: rgb(12, 11, 11);
     filter: drop-shadow( 1px 1px 10px white);
     font-size: 5rem;
 }
@@ -146,7 +146,7 @@ i {
 }
 
 .fa-cloud{
-    color: rgba(94, 230, 223, 0.973);
+    color: rgba(127, 243, 224, 0.973);
     filter: drop-shadow( 1px 1px 5px rgb(210, 233, 240));
     animation-name: cloudMovement;
     animation-iteration-count: infinite;
